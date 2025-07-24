@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import CarouselSlider from '../components/CarouselSlider'
 import { Link } from 'react-router-dom';
-import { Lock } from 'lucide-react';
 
 
 
@@ -242,8 +241,8 @@ const Athletes = () => {
                               {id}
                             </div>
                             <div className="text-white font-bold text-base">{titles[index]}</div>
-                            <div className="ml-auto">
-                              <Lock size={20} className="text-black fill-[#d4bc6d]" />
+                            <div className="ml-auto mr-4 flex items-center">
+                              <img src="/mask_lock.svg" alt="locked" className="w-6 h-6" />
                             </div>
                           </div>
                         );
@@ -336,8 +335,8 @@ const Athletes = () => {
                                 <div className="text-white font-bold text-base sm:text-lg ml-4">
                                   {titles[index]}
                                 </div>
-                                <div className="ml-auto mr-4">
-                                  <Lock size={24} className="text-black fill-[#d4bc6d]" />
+                                <div className="ml-auto mr-4 flex items-center">
+                                  <img src="/mask_lock.svg" alt="locked" className="w-6 h-6" />
                                 </div>
                               </div>
                             );
