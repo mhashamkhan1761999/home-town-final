@@ -80,7 +80,7 @@ const Header = () => {
         {/* Desktop Buttons */}
         <div className="hidden lg:flex gap-4 items-center">
           <a
-            href="/login"
+            href=""
             className="border-2 border-[#d4bc6d] text-white rounded-full uppercase px-6 py-3 text-sm font-semibold"
           >
             Login
@@ -89,7 +89,7 @@ const Header = () => {
             to="/athlete-signup"
             className="bg-[#d4bc6d] rounded-full uppercase px-6 py-3 text-black text-sm font-semibold"
           >
-            Sign Up As
+            Sign Up
           </Link>
         </div>
 

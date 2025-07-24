@@ -23,7 +23,8 @@ const OurTeam = () => {
                             sport: 'Soccer',
                             homeTown: ['Karachi', 'Pakistan'],
                             backheading: "Saif Khan",
-                            about: "This athlete is currently trending and has achieved several milestones in their sport. Click to learn more or view their full profile"
+                            about: "Role at Hometown Hero: As CTO, Saif leads technology, platform development, and automation, aligning product innovation with business growth and scalable infrastructure.\n\nResume of Accomplishments: Saif’s discipline as a soccer player and 5+ years in sales, marketing, and digital strategy help him build intelligent systems that merge creativity, technology, and automation for great customer experiences."
+
                         },
                         {
                             name: 'Thomas Jenkins',
@@ -33,7 +34,8 @@ const OurTeam = () => {
                             sport: 'Wrestling, Rugby',
                             homeTown: ['Bridgewater', 'Virginia'],
                             backheading: "Thomas Jenkins",
-                            about: "This athlete is currently trending and has achieved several milestones in their sport. Click to learn more or view their full profile"
+                            about: "Role at Hometown Hero: As Vice President, Thomas drives growth strategy and operational infrastructure, refining processes and building scalable systems for long-term success.\n\nResume of Accomplishments: Thomas has launched sales programs for global companies, worked at Bloomberg, and sold products internationally. His mix of corporate expertise and entrepreneurial experience helps major brands implement high-impact sales systems."
+
                         
                         },
                         {
@@ -44,7 +46,8 @@ const OurTeam = () => {
                             sport: 'Basketball',
                             homeTown: ['Sydney', 'Australia'],
                             backheading: "Alek Giotopoulos Moore",
-                            about: "This athlete is currently trending and has achieved several milestones in their sport. Click to learn more or view their full profile"
+                            about: "Role at Hometown Hero: As CEO, Alek leads management, operations, sales, and client support, ensuring every athlete receives personalized guidance and top-tier service.\n\nResume of Accomplishments: Alek played for Prolific Prep with future NBA stars. His leadership and management expertise have helped scale Hometown Hero into a leading NIL marketplace, delivering value to athletes, brands, and teams."
+
                         
                         },
                         {
@@ -55,14 +58,14 @@ const OurTeam = () => {
                             sport: 'Basketball',
                             homeTown: ['Tokyo', 'Japan'],
                             backheading: "Benjamin Jenkins",
-                            about: "This athlete is currently trending and has achieved several milestones in their sport. Click to learn more or view their full profile"
+                            about: "Role at Hometown Hero: Founder Benjamin leads strategic vision and global growth, tackling complex challenges from international partnerships to innovation and new revenue streams.\n\nResume of Accomplishments: Benjamin played for a top-ranked prep basketball team alongside future NBA stars. Inspired by gaps in athlete support, he founded Hometown Hero to empower athletes with branding, mentorship, and NIL resources."
                         
                         },
                         {
                             name: 'Coming Soon',
                             image: '/question-mark.jpeg',
                             backheading: "Coming Soon",
-                            about: "This athlete is currently trending and has achieved several milestones in their sport. Click to learn more or view their full profile"
+                            about: "Coming Soon"
                         
                         },
                     ]}

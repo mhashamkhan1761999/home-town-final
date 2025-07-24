@@ -26,9 +26,7 @@ const CarouselSlider2 = ({ data }) => {
 
                 onSlideChange={(swiper) => {
                     console.log('Slide changed to index:', swiper.activeIndex);
-                    if (swiper.activeIndex === 0) {
-                        swiper.slideTo(2); // Go to the third slide
-                    }
+                   
                 }}
                 coverflowEffect={{
                     rotate: 0,
@@ -98,10 +96,15 @@ const Card = ({ name, image, rating, subTitle, isTrending = false, sport = '', h
       {/* Back Side */}
       <div className="absolute inset-0 w-full h-full bg-[#111] rounded-2xl border border-[#2f2f2f] text-white px-6 py-8 flex items-center justify-center text-center rotate-y-180 backface-hidden">
          <div>
-          <h3 className="text-xl font-bold text-[#d4bc6d] mb-4">{backheading}</h3>
-          <p className="text-sm sm:text-base leading-relaxed">
-            {about}
-          </p>
+          {about.split('\n\n').map((section, idx) => {
+            const [heading, ...rest] = section.split(':');
+            return (
+              <div key={idx} className="mb-4">
+                <h3 className="text-xl font-bold text-[#d4bc6d] mb-2">{heading.trim()}</h3>
+                <p className="text-sm sm:text-base leading-relaxed">{rest.join(':').trim()}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
 

@@ -72,7 +72,7 @@ const Footer = () => {
                 <div className="px-4 mt-16">
                     <Link
                         to="/athlete-signup"
-                        className="w-full py-10 sm:py-[60px] px-6 sm:px-[85px] rounded-lg flex flex-col sm:flex-row gap-6 sm:gap-0 items-center justify-between bg-[url('/join.jpg')] bg-cover bg-center bg-no-repeat"
+                        className="w-full py-10 sm:py-[60px] px-6 sm:px-[85px] rounded-lg flex flex-col sm:flex-row gap-6 sm:gap-0 items-center justify-between bg-gradient-to-r from-[#d4bc6d] to-[#57430d]"
                     >
                         <div className="text-xl sm:text-[1.669rem] font-medium text-white text-center sm:text-left">
                             Join the family
