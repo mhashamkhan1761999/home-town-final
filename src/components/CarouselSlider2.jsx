@@ -68,9 +68,10 @@ export default CarouselSlider2
 
 // ✅ Card.jsx
 const Card = ({ name, image, rating, subTitle, isTrending = false, sport = '', homeTown = [], backheading='',  about = '' ,}) => (
-  <div className="relative w-full h-[450px] group perspective">
+//   <div className="relative w-full h-[450px] group perspective">
+   <div className="relative w-full sm:w-full w-full h-[400px] sm:h-[450px] group perspective mx-auto">
     <div className="relative w-full h-full transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
-
+    
       {/* Front Side */}
       <div
         className="absolute inset-0 w-full h-full p-3 rounded-2xl bg-no-repeat bg-cover bg-center border border-[#2f2f2f] bg-[rgba(255,255,255,0.05)] backdrop-sepia-40 overflow-hidden backface-hidden"
