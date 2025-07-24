@@ -1,5 +1,9 @@
 import React from 'react'
 import CarouselSlider2 from '../components/CarouselSlider2'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const ExploreAthletes = () => {
     return (
@@ -148,7 +152,7 @@ const ExploreAthletes = () => {
                     ]}
                 />
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-[96rem] mx-auto mt-12 mb-16">
+                {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-[96rem] mx-auto mt-12 mb-16">
                     {[
                         { title: "Bronze", img: "/bronze.png" },
                         { title: "Silver", img: "/Silver.png" },
@@ -174,7 +178,80 @@ const ExploreAthletes = () => {
                             </button>
                         </div>
                     ))}
+                </div> */}
+
+                {/* Mobile Carousel */}
+                <div className="sm:hidden mt-12 mb-20">
+                  <Swiper
+                    spaceBetween={24}
+                    slidesPerView={1.15}
+                    centeredSlides={true}
+                    loop={true}
+                    pagination={{ clickable: true, el: '.custom-swiper-pagination' }}
+                    modules={[Pagination]}
+                    className="w-full"
+                  >
+                    {[
+                      { title: "Bronze", img: "/bronze.png" },
+                      { title: "Silver", img: "/Silver.png" },
+                      { title: "Gold", img: "/Gold.png" },
+                      { title: "Diamond", img: "/Diamond.png" },
+                      { title: "Emerald", img: "/Emerlad.png" },
+                      { title: "Royal", img: "/Royal.png" },
+                    ].map((item) => (
+                      <SwiperSlide key={item.title}>
+                        <div className="text-center">
+                          <img
+                            src={item.img}
+                            alt={item.title}
+                            className="w-56 h-auto object-contain mx-auto mb-4"
+                          />
+                          <h4 className="text-4xl font-bold bg-[linear-gradient(to_right,#d4bc6d,#57430d)] bg-clip-text text-transparent mb-6 capitalize">
+                            {item.title}
+                          </h4>
+                          <button
+                            className="bg-[#D4BC6D] text-black text-lg font-semibold py-5 px-14 rounded-full shadow-lg transition-colors duration-300 ease-in-out hover:text-black hover:bg-[#D4BC6D]"
+                            type="button"
+                          >
+                            View
+                          </button>
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                  <div className="custom-swiper-pagination flex justify-center mt-4" />
                 </div>
+
+                {/* Desktop Grid */}
+                <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-[96rem] mx-auto mt-12 mb-16">
+                {[
+                    { title: "Bronze", img: "/bronze.png" },
+                    { title: "Silver", img: "/Silver.png" },
+                    { title: "Gold", img: "/Gold.png" },
+                    { title: "Diamond", img: "/Diamond.png" },
+                    { title: "Emerald", img: "/Emerlad.png" },
+                    { title: "Royal", img: "/Royal.png" },
+                ].map((item) => (
+                    <div key={item.title} className="text-center">
+                    <img
+                        src={item.img}
+                        alt={item.title}
+                        className="w-32 sm:w-36 md:w-40 h-auto object-contain mx-auto"
+                    />
+                    <h4 className="text-2xl sm:text-3xl lg:text-[3rem] text-center capitalize font-medium bg-[linear-gradient(to_right,#d4bc6d,#57430d)] bg-clip-text text-transparent mb-4">
+                        {item.title}
+                    </h4>
+                    <button
+                        className="bg-[#D4BC6D] text-black text-sm font-medium py-3 px-8 sm:px-10 rounded-full shadow-lg transition-colors duration-300 ease-in-out hover:text-black hover:bg-[#D4BC6D]"
+                        type="button"
+                    >
+                        View
+                    </button>
+                    </div>
+                ))}
+                </div>
+
+
             </section>
 
         </>

@@ -137,7 +137,7 @@ const AthletesSignUp = () => {
                             { label: 'Personal Info' },
                             { label: 'School Team / Info' },
                             { label: 'Social Media' },
-                            { label: 'Store Front Profile/ Info' },
+                            // { label: 'Store Front Profile/ Info' },
                         ]}
                         styleConfig={{
                             activeBgColor: "#D4BC6D",

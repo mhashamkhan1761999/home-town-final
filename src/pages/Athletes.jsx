@@ -11,7 +11,7 @@ const featureList = [
         id: 1,
         title: 'Clothing',
         description: "This isn’t just your gear — this reflects your game. Your clothing line should tell your story before you even say a word. Whether you're rocking it at the gym, on campus, or out with friends, each piece represents your grind, your mindset, and your movement. With full customization and top-tier quality, you’re not just selling a product — you’re building a uniform for your supporters to wear with pride. This is your everyday legacy.",
-        image: '/user-cash.svg',
+        image: '/clothing.jpg',
         locked: false,
     },
     {
@@ -65,8 +65,8 @@ const featureList = [
     },
     {
         id: 9,
-        title: 'Book',
-        description: "Your story is your power — now publish it. Whether it’s a personal journey, motivational journal, training guide, or kids’ book, the Book service gives you the chance to build a legacy through words. You don’t need a publisher — you need a platform. And now you’ve got one. Inspire the next you by telling the world how you got here.",
+        title: 'Graphics and AI Video',
+        description: "Your moment deserves more than just a post. Whether it’s a commitment, an announcement, or just a statement — we combine professional graphics with AI-powered videos to help you stand out. Get next-level visuals made just for you. From commitment graphics to custom video edits, this is where your story gets seen.",
         image: '/book.png',
         locked: false,
     },
@@ -96,27 +96,34 @@ const featureList = [
 
 const Athletes = () => {
     const [activeFeature, setActiveFeature] = useState(featureList[0]);
+    
     return (
         <>
             {/* first section */}
-            <section className="bg-[url('/athlete-bg.jpg')] bg-cover bg-center bg-no-repeat h-screen mt-[-8.75rem]">
-                <div className="bg-[rgba(0,0,0,0.2)] w-full h-full flex flex-col items-center justify-center p-4 sm:p-6 md:p-10 text-center">
-                    <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[6.875rem] uppercase font-extrabold bg-gradient-to-r from-[#d4bc6d] to-[#57430d] bg-clip-text text-transparent mb-4 sm:mb-5 leading-tight">
-                        HOMETOWN HERO FOR <br className="hidden md:block" /> ATHLETES
-                    </h1>
+        <section className="relative w-full bg-no-repeat bg-center bg-contain sm:bg-cover bg-[url('/athlete-bg.jpg')]">
+            <div className="absolute inset-0 bg-[rgba(0,0,0,0.4)] z-0" />
 
-                    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#adadad] font-medium max-w-[95%] md:max-w-4xl lg:max-w-[1200px] mb-6">
-                        We support athletes through every step of their NIL journey, providing a range of opportunities designed to maximize earnings and build lasting value. At Hometown Hero, we offer 50% commissions — the highest-percentage earning opportunities in the NIL marketplace — because we care about athletes, their futures, and making sure they win on and off the field.
-                    </p>
+            <div className="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6 md:px-15 py-20 sm:py-38 text-center w-full max-w-screen-xl mx-auto">
+                <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[6.875rem] uppercase font-extrabold bg-gradient-to-r from-[#d4bc6d] to-[#57430d] bg-clip-text text-transparent mb-4 sm:mb-5 leading-tight">
+                HOMETOWN HERO FOR <br className="hidden md:block" /> ATHLETES
+                </h1>
 
-                    <Link
-                        to="/athlete-signup"
-                        className="inline-block bg-[#d4bc6d] hover:bg-[#c2a851] text-black font-black text-sm sm:text-base md:text-lg rounded-xl px-6 sm:px-8 py-3 transition duration-300"
-                    >
-                        Join the Family
-                    </Link>
-                </div>
-            </section>
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#adadad] font-medium w-full max-w-[1200px] mb-6">
+                We support athletes through every step of their NIL journey, providing a range of opportunities designed to maximize earnings and build lasting value. At Hometown Hero, we offer 50% commissions — the highest-percentage earning opportunities in the NIL marketplace — because we care about athletes, their futures, and making sure they win on and off the field.
+                </p>
+
+                <Link
+                to="/athlete-signup"
+                className="inline-block bg-[#d4bc6d] hover:bg-[#c2a851] text-black font-black text-sm sm:text-base md:text-lg rounded-xl px-6 sm:px-8 py-3 transition duration-300"
+                >
+                Join the Family
+                </Link>
+            </div>
+        </section>
+
+
+
+
 
 
             {/* third section */}
@@ -160,108 +167,188 @@ const Athletes = () => {
             {/* third section */}
             <div className="w-full h-[1px] bg-[#d4bc6d] opacity-30 my-1"></div>
 
-            <section className="pt-[100px] pb-[60px] px-4 sm:px-6 md:px-12">
-                <div className="max-w-[1764px] mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-20 items-start">
-                        {/* Left Side */}
-                        <div>
-                            <button className="bg-[#2e2e2e] rounded-full px-6 py-3 text-[#d4bc6d] font-medium text-sm sm:text-base mb-6">
-                                Why Choose Us
-                            </button>
-
-                            <h2 className="text-[2.25rem] sm:text-[3rem] lg:text-[4.125rem] font-bold capitalize bg-[linear-gradient(to_right,#d4bc6d,#57430d)] bg-clip-text text-transparent tracking-tight mb-6">
-                                {activeFeature.title}
-                            </h2>
-
-                            <div className="w-full">
-                                <img
-                                    src={activeFeature.image}
-                                    alt={activeFeature.title}
-                                    className="w-full max-w-full sm:max-w-[35rem] h-auto object-contain border-4 border-[#C29A4B] rounded-2xl shadow-md mb-6"
-                                />
-                                <p className="text-base sm:text-lg text-white mb-8 whitespace-pre-line">
-                                    {activeFeature?.description}
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Right Side - Feature List */}
-                        <div>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                {/* Unlocked Features */}
-                                <div className="flex flex-col gap-4">
-                                    {featureList.map((feature) => (
-                                        <div
-                                            key={feature.id}
-                                            onClick={() => {
-                                                if (!feature.locked) setActiveFeature(feature);
-                                            }}
-                                            className={`bg-[#ffffff19] flex items-center p-3 rounded-full cursor-pointer hover:bg-[#ffffff2d] transition ${feature.id === activeFeature.id ? 'border border-[#d4bc6d]' : ''
-                                                }`}
-                                        >
-                                            <div
-                                                className={`relative h-12 w-12 rounded-full text-white text-lg sm:text-xl font-medium flex items-center justify-center ${feature.id === activeFeature.id ? 'bg-[#d4bc6d]' : 'bg-[#666666]'
-                                                    }`}
-                                            >
-                                                {feature.id}
-                                                {feature.locked && (
-                                                    <span className="absolute -top-1 -right-1 text-xs bg-black rounded-full px-1 py-0.5">
-                                                        🔒
-                                                    </span>
-                                                )}
-                                            </div>
-                                            <div
-                                                className={`font-bold text-base sm:text-lg ml-4 ${feature.id === activeFeature.id
-                                                    ? 'text-[#d4bc6d]'
-                                                    : 'text-white'
-                                                    }`}
-                                            >
-                                                {feature.title}
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                {/* Locked Features */}
-                                <div className="flex flex-col gap-4">
-                                    <div className="p-2">
-                                        <h4 className="text-xl font-bold text-[#D4BC6D]">Coming Soon</h4>
-                                    </div>
-
-                                    {[...Array(6)].map((_, index) => {
-                                        const id = index + 12;
-                                        const titles = [
-                                            "Brand Marketplace",
-                                            "LMS Online Course",
-                                            "Press",
-                                            "Newsroom",
-                                            "Fan's Room",
-                                            "Enterprise Support (MVP)",
-                                        ];
-                                        return (
-                                            <div
-                                                key={id}
-                                                className="bg-[#ffffff19] flex items-center p-3 rounded-full"
-                                            >
-                                                <div className="h-12 w-12 rounded-full text-white text-lg sm:text-xl font-medium bg-[#666666] flex items-center justify-center">
-                                                    {id}
-                                                </div>
-                                                <div className="text-white font-bold text-base sm:text-lg ml-4">
-                                                    {titles[index]}
-                                                </div>
-                                                <div className="ml-auto mr-4">
-                                                    <Lock size={24} className="text-black fill-[#d4bc6d]" />
-                                                </div>
-                                            </div>
-                                        );
-                                    })}
-                                </div>
-                            </div>
-                        </div>
+                       {/* Features Section: Mobile Accordion + Desktop Grid */}
+            <section className="pt-[50px] pb-[60px] px-4 sm:px-6 md:px-12">
+              <div className="max-w-[1764px] mx-auto">
+                {/* Mobile Heading/Button */}
+                    <div className="sm:hidden mb-6">
+                    <button className="bg-[#2e2e2e] rounded-full px-6 py-3 text-[#d4bc6d] font-medium text-sm mb-6">
+                        Why Choose Us
+                    </button>
                     </div>
+                {/* Mobile FAQ Accordion */}
+                <div className="sm:hidden">
+                                  {featureList.map((feature) => (
+                  <div
+                    key={feature.id}
+                    className={`mb-4 rounded-2xl bg-[#ffffff19] transition
+                      ${activeFeature.id === feature.id ? 'border-2 border-[#d4bc6d]' : 'border border-[#d4bc6d]'}
+                    `}
+                  >
+                    <button
+                      className="w-full flex items-center justify-between px-4 py-3 text-left"
+                      onClick={() => setActiveFeature(feature)}
+                    >
+                      <span className="flex items-center gap-2">
+                        <span
+                          className={`h-8 w-8 rounded-full flex items-center justify-center font-bold text-sm transition
+                            ${activeFeature.id === feature.id ? 'bg-[#d4bc6d] text-[#57430d]' : 'bg-[#666666] text-white'}
+                          `}
+                        >
+                          {feature.id}
+                        </span>
+                        <span
+                          className={`font-bold text-base transition
+                            ${activeFeature.id === feature.id ? 'text-[#d4bc6d]' : 'text-[#d4bc6d]'}
+                          `}
+                        >
+                          {feature.title}
+                        </span>
+                      </span>
+                      <span className="ml-2">{activeFeature.id === feature.id ? '−' : '+'}</span>
+                    </button>
+                    {activeFeature.id === feature.id && (
+                      <div className="px-4 pb-4">
+                        <img
+                          src={feature.image}
+                          alt={feature.title}
+                          className="w-full max-w-full h-auto object-contain border-4 border-[#C29A4B] rounded-2xl shadow-md mb-4"
+                        />
+                        <p className="text-base text-white whitespace-pre-line">{feature.description}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+                  {/* Locked Features Accordion */}
+                  <div className="mb-4 border border-[#d4bc6d] rounded-xl bg-[#ffffff19]">
+                    <button className="w-full flex items-center justify-between px-4 py-3 text-left">
+                      <span className="font-bold text-base text-[#d4bc6d]">Coming Soon</span>
+                    </button>
+                    <div className="px-4 pb-4">
+                      {[...Array(6)].map((_, index) => {
+                        const id = index + 12;
+                        const titles = [
+                          "Brand Marketplace",
+                          "LMS Online Course",
+                          "Press",
+                          "Newsroom",
+                          "Books",
+                          "Fan's Room",
+                          "Enterprise Support (MVP)",
+                        ];
+                        return (
+                          <div key={id} className="flex items-center mb-2">
+                            <div className="h-10 w-10 rounded-full bg-[#666666] flex items-center justify-center text-white font-medium mr-3">
+                              {id}
+                            </div>
+                            <div className="text-white font-bold text-base">{titles[index]}</div>
+                            <div className="ml-auto">
+                              <Lock size={20} className="text-black fill-[#d4bc6d]" />
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
                 </div>
+                {/* Desktop/Tablet Grid */}
+                <div className="hidden sm:block">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-20 items-start">
+                    {/* Left Side */}
+                    <div>
+                      <button className="bg-[#2e2e2e] rounded-full px-6 py-3 text-[#d4bc6d] font-medium text-sm sm:text-base mb-6">
+                        Why Choose Us
+                      </button>
+                      <h2 className="text-[2.25rem] sm:text-[3rem] lg:text-[4.125rem] font-bold capitalize bg-[linear-gradient(to_right,#d4bc6d,#57430d)] bg-clip-text text-transparent tracking-tight mb-6">
+                        {activeFeature.title}
+                      </h2>
+                      <div className="w-full">
+                        <img
+                          src={activeFeature.image}
+                          alt={activeFeature.title}
+                          className="w-full max-w-full sm:max-w-[35rem] h-auto object-contain border-4 border-[#C29A4B] rounded-2xl shadow-md mb-6"
+                        />
+                        <p className="text-base sm:text-lg text-white mb-8 whitespace-pre-line">
+                          {activeFeature?.description}
+                        </p>
+                      </div>
+                    </div>
+                    {/* Right Side - Feature List */}
+                    <div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        {/* Unlocked Features */}
+                        <div className="flex flex-col gap-4">
+                          {featureList.map((feature) => (
+                            <div
+                              key={feature.id}
+                              onClick={() => {
+                                if (!feature.locked) setActiveFeature(feature);
+                              }}
+                              className={`bg-[#ffffff19] flex items-center p-3 rounded-full cursor-pointer hover:bg-[#ffffff2d] transition ${feature.id === activeFeature.id ? 'border border-[#d4bc6d]' : ''
+                                }`}
+                            >
+                              <div
+                                className={`relative h-12 w-12 rounded-full text-white text-lg sm:text-xl font-medium flex items-center justify-center ${feature.id === activeFeature.id ? 'bg-[#d4bc6d]' : 'bg-[#666666]'
+                                  }`}
+                              >
+                                {feature.id}
+                                {feature.locked && (
+                                  <span className="absolute -top-1 -right-1 text-xs bg-black rounded-full px-1 py-0.5">
+                                    🔒
+                                  </span>
+                                )}
+                              </div>
+                              <div
+                                className={`font-bold text-base sm:text-lg ml-4 ${feature.id === activeFeature.id
+                                  ? 'text-[#d4bc6d]'
+                                  : 'text-white'
+                                  }`}
+                              >
+                                {feature.title}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                        {/* Locked Features */}
+                        <div className="flex flex-col gap-4">
+                          <div className="p-2">
+                            <h4 className="text-xl font-bold text-[#D4BC6D]">Coming Soon</h4>
+                          </div>
+                          {[...Array(6)].map((_, index) => {
+                            const id = index + 12;
+                            const titles = [
+                              "Brand Marketplace",
+                              "LMS Online Course",
+                              "Press",
+                              "Newsroom",
+                              "Books",
+                              "Fan's Room",
+                              "Enterprise Support (MVP)",
+                            ];
+                            return (
+                              <div
+                                key={id}
+                                className="bg-[#ffffff19] flex items-center p-3 rounded-full"
+                              >
+                                <div className="h-12 w-12 rounded-full text-white text-lg sm:text-xl font-medium bg-[#666666] flex items-center justify-center">
+                                  {id}
+                                </div>
+                                <div className="text-white font-bold text-base sm:text-lg ml-4">
+                                  {titles[index]}
+                                </div>
+                                <div className="ml-auto mr-4">
+                                  <Lock size={24} className="text-black fill-[#d4bc6d]" />
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </section>
-
 
             {/* third section */}
             <section className="py-[60px] md:py-[80px] lg:py-[98px] bg-[url('/bg-texture.svg')] bg-no-repeat bg-center bg-[length:100%]">
@@ -318,13 +405,10 @@ const Athletes = () => {
                     </div>
 
                     {/* Center Phone Mockup */}
-                    <div className="flex justify-center">
-                        <div
-                            className=""
-                            style={{ width: '100%', maxWidth: '433px', height: '812px' }}
-                        >
-                            <img src="/mobile.png" alt="mobile" className='w-full h-full' />
-                        </div>
+                    <div className="flex justify-center px-4 sm:px-6">
+                    <div className="w-full max-w-[200px] sm:max-w-[300px] md:max-w-[433px]">
+                        <img src="/mobile.png" alt="mobile" className="w-full h-auto" />
+                    </div>
                     </div>
 
                     {/* Right Feature – Desktop Only */}

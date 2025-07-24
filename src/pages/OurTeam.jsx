@@ -1,5 +1,6 @@
 import React from 'react'
 import CarouselSlider2 from '../components/CarouselSlider2'
+// import CarouselSlider2 from '../components/flipcarousel'
 
 const OurTeam = () => {
     return (
@@ -8,6 +9,9 @@ const OurTeam = () => {
                 <h1 className="text-[clamp(2.5rem,10vw,10rem)] mt-10 mb-4 text-center capitalize font-bold bg-gradient-to-r from-[#d4bc6d] to-[#57430d] bg-clip-text text-transparent">
                     Our Leaders
                 </h1>
+
+           
+
 
                 <CarouselSlider2
                     data={[
@@ -18,6 +22,8 @@ const OurTeam = () => {
                             subTitle: 'Chief Technology Officer (CTO)',
                             sport: 'Soccer',
                             homeTown: ['Karachi', 'Pakistan'],
+                            backheading: "Saif Khan",
+                            about: "This athlete is currently trending and has achieved several milestones in their sport. Click to learn more or view their full profile"
                         },
                         {
                             name: 'Thomas Jenkins',
@@ -26,6 +32,9 @@ const OurTeam = () => {
                             subTitle: 'Vice President',
                             sport: 'Wrestling, Rugby',
                             homeTown: ['Bridgewater', 'Virginia'],
+                            backheading: "Thomas Jenkins",
+                            about: "This athlete is currently trending and has achieved several milestones in their sport. Click to learn more or view their full profile"
+                        
                         },
                         {
                             name: 'Alek Giotopoulos Moore',
@@ -34,6 +43,9 @@ const OurTeam = () => {
                             subTitle: 'CEO',
                             sport: 'Basketball',
                             homeTown: ['Sydney', 'Australia'],
+                            backheading: "Alek Giotopoulos Moore",
+                            about: "This athlete is currently trending and has achieved several milestones in their sport. Click to learn more or view their full profile"
+                        
                         },
                         {
                             name: 'Benjamin Jenkins',
@@ -42,10 +54,16 @@ const OurTeam = () => {
                             subTitle: 'Founder',
                             sport: 'Basketball',
                             homeTown: ['Tokyo', 'Japan'],
+                            backheading: "Benjamin Jenkins",
+                            about: "This athlete is currently trending and has achieved several milestones in their sport. Click to learn more or view their full profile"
+                        
                         },
                         {
                             name: 'Coming Soon',
                             image: '/question-mark.jpeg',
+                            backheading: "Coming Soon",
+                            about: "This athlete is currently trending and has achieved several milestones in their sport. Click to learn more or view their full profile"
+                        
                         },
                     ]}
                 />

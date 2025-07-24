@@ -82,7 +82,7 @@ const Home = () => {
                 </Link>
             </section>
 
-            <section className="pt-20 sm:pt-[105px]">
+            <section className="pt-10 sm:pt-[105px]">
                 <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-[16px] justify-center items-center px-4 text-center">
                     {['YOUR STORY', 'YOUR BRAND', 'YOUR LEGACY'].map((text, idx) => (
                         <h2
@@ -95,10 +95,10 @@ const Home = () => {
                 </div>
 
                 {/* If you want the image section visible, remove `hidden` and control via breakpoints */}
-                <div className="mt-8 sm:mt-[87.1px] px-4 sm:px-0">
+                {/* <div className="mt-8 sm:mt-[87.1px] px-4 sm:px-0">
                     <div className="bg-[url(/play-boy.png)] bg-no-repeat bg-center bg-cover h-[250px] sm:h-[400px] lg:h-[704px] w-full rounded-xl sm:rounded-3xl overflow-hidden relative">
 
-                        {/* Play Button */}
+                        Play Button
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                             <img
                                 src="/play-button.svg"
@@ -107,7 +107,7 @@ const Home = () => {
                             />
                         </div>
 
-                        {/* CTA Button */}
+                        CTA Button
                         <div className="absolute bottom-4 sm:bottom-6 lg:bottom-[38px] left-1/2 transform -translate-x-1/2">
                             <button
                                 className="text-black text-sm sm:text-base lg:text-[1.125rem] font-extrabold bg-[#d4bc6d] rounded-lg sm:rounded-xl lg:rounded-[20px] px-5 sm:px-6 lg:px-[2.125rem] py-2.5 sm:py-3.5 lg:py-6"
@@ -117,11 +117,11 @@ const Home = () => {
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
             </section>
 
-            <section className="pt-16 sm:pt-[195px] pb-12 sm:pb-[98px]">
+            <section className="pt-10 sm:pt-[195px] pb-10 sm:pb-[98px]">
                 <div className="max-w-[95%] lg:max-w-[1284px] 2xl:max-w-[1764px] mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 

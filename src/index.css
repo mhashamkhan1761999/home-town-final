@@ -152,3 +152,34 @@ body {
   border: 1px dashed transparent;
   background: linear-gradient(#060606, #060606) padding-box, linear-gradient(180deg, #D4BC6D, #57430D) border-box;
 }
+
+
+/* Flip Card Styles */
+
+.perspective {
+  perspective: 1200px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+.transition-transform {
+  transition: transform 0.7s;
+}
+
+
+
+/* Pagination Dots Colors */
+.custom-swiper-pagination .swiper-pagination-bullet {
+  background: #d4bc6d;
+  opacity: 0.5;
+}
+.custom-swiper-pagination .swiper-pagination-bullet-active {
+  background: #d4bc6d;
+  opacity: 1;
+}
