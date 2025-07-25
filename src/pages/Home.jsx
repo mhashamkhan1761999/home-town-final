@@ -148,17 +148,21 @@ const Home = () => {
 
                         {/* Video Section */}
                         <div className="px-4 lg:px-0">
-                            <div className="relative h-[250px] sm:h-[350px] lg:h-[500px] w-full rounded-2xl overflow-hidden bg-black flex items-center justify-center">
-                                <video
-                                    autoPlay
-                                    muted
-                                    loop
-                                    playsInline
-                                    className="max-h-full max-w-full object-contain"
-                                >
-                                    <source src="/video2.mp4" type="video/mp4" />
-                                    Your browser does not support the video tag.
-                                </video>
+                            <div className="relative h-[250px] sm:h-[350px] lg:h-[500px] w-full rounded-2xl overflow-hidden flex items-center justify-center">
+                              {/* Blurry gold gradient background */}
+                              <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#d4bc6d]/70 via-[#57430d]/60 to-[#d4bc6d]/80 blur-[32px]" />
+                              {/* Optional: add a slight dark overlay for contrast */}
+                              <div className="absolute inset-0 z-10 bg-black/30" />
+                              <video
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                className="relative z-20 max-h-full max-w-full object-contain"
+                              >
+                                <source src="/video23.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                              </video>
                             </div>
                         </div>
                     </div>

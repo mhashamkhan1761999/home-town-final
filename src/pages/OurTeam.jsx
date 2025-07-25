@@ -7,7 +7,7 @@ const OurTeam = () => {
         <>
             <section className="py-16 bg-black px-4 sm:px-6 lg:px-8">
                 <h1 className="text-[clamp(2.5rem,10vw,10rem)] mt-10 mb-4 text-center capitalize font-bold bg-gradient-to-r from-[#d4bc6d] to-[#57430d] bg-clip-text text-transparent">
-                    Our Leaders
+                    Furious 5 Leaders
                 </h1>
 
            
@@ -62,10 +62,14 @@ const OurTeam = () => {
                         
                         },
                         {
-                            name: 'Coming Soon',
-                            image: '/question-mark.jpeg',
-                            backheading: "Coming Soon",
-                            about: "Coming Soon"
+                            name: 'Raza Khan',
+                            image: '/Raza.jpg',
+                            rating: 0,
+                            subTitle: 'Head of department',
+                            sport: 'Soccer & Volleyball',
+                            homeTown: ['Karachi', 'Pakistan'],
+                            backheading: "Raza Khan",
+                            about: "Role at Hometown Hero: As Head of Department, Raza oversees team management, sales strategy, and daily operations, ensuring smooth execution and high performance across all initiatives.\n\nResume of Accomplishments: With 5 years of experience in sales, team management, and leadership, Raza has consistently led teams to exceed targets and played a key role in driving revenue growth through strategic planning and hands-on execution. His leadership and operational expertise help power Hometown Hero’s continued success."
                         
                         },
                     ]}
