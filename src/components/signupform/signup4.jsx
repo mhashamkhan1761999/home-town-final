@@ -52,7 +52,7 @@ const Signup4 = ({ next, setData, goBack }) => {
                     </div>
                     <div className="mb-12">
                         <label className='text-lg font-semibold text-[#D4BC6D] mb-5 inline-block'>
-                            Email Address
+                            Email Address <span className='text-[#666666]'>(Optional)</span>
                         </label>
                         <div className="flex rounded-t-lg bg-[rgba(217,217,217,0.03)] border-b border-[#4B4C46]">
                             <div className="p-4 invisible">
@@ -106,7 +106,7 @@ const Signup4 = ({ next, setData, goBack }) => {
                     </h4>
                     <div className="mb-12">
                         <label className='text-lg font-semibold text-[#D4BC6D] mb-5 inline-block'>
-                            Full Name
+                            Full Name <span className='text-[#666666]'>(Optional)</span>
                         </label>
                         <div className="flex rounded-t-lg bg-[rgba(217,217,217,0.03)] border-b border-[#4B4C46]">
                             <div className="p-4 invisible">
@@ -131,7 +131,7 @@ const Signup4 = ({ next, setData, goBack }) => {
                     </div>
                     <div className="mb-12">
                         <label className='text-lg font-semibold text-[#D4BC6D] mb-5 inline-block'>
-                            Email Address
+                            Email Address <span className='text-[#666666]'>(Optional)</span>
                         </label>
                         <div className="flex rounded-t-lg bg-[rgba(217,217,217,0.03)] border-b border-[#4B4C46]">
                             <div className="p-4 invisible">
@@ -180,7 +180,7 @@ const Signup4 = ({ next, setData, goBack }) => {
                     </h4>
                     <div className="mb-12">
                         <label className='text-lg font-semibold text-[#D4BC6D] mb-5 inline-block'>
-                            Full Name
+                            Full Name <span className='text-[#666666]'>(Optional)</span>
                         </label>
                         <div className="flex rounded-t-lg bg-[rgba(217,217,217,0.03)] border-b border-[#4B4C46]">
                             <div className="p-4 invisible">
@@ -205,7 +205,7 @@ const Signup4 = ({ next, setData, goBack }) => {
                     </div>
                     <div className="mb-12">
                         <label className='text-lg font-semibold text-[#D4BC6D] mb-5 inline-block'>
-                            Email Address
+                            Email Address <span className='text-[#666666]'>(Optional)</span>
                         </label>
                         <div className="flex rounded-t-lg bg-[rgba(217,217,217,0.03)] border-b border-[#4B4C46]">
                             <div className="p-4 invisible">
@@ -255,7 +255,7 @@ const Signup4 = ({ next, setData, goBack }) => {
                     </p>
                     <div className="mb-12">
                         <label className='text-lg font-semibold text-[#D4BC6D] mb-5 inline-block'>
-                            Full Name
+                            Full Name <span className='text-[#666666]'>(Optional)</span>
                         </label>
                         <div className="flex rounded-t-lg bg-[rgba(217,217,217,0.03)] border-b border-[#4B4C46]">
                             <div className="p-4 invisible">
@@ -280,7 +280,7 @@ const Signup4 = ({ next, setData, goBack }) => {
                     </div>
                     <div className="mb-12">
                         <label className='text-lg font-semibold text-[#D4BC6D] mb-5 inline-block'>
-                            Email Address
+                            Email Address <span className='text-[#666666]'>(Optional)</span>
                         </label>
                         <div className="flex rounded-t-lg bg-[rgba(217,217,217,0.03)] border-b border-[#4B4C46]">
                             <div className="p-4 invisible">

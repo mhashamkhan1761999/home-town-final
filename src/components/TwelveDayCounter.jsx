@@ -62,8 +62,13 @@ const TwelveDayCounter = () => {
 
             {/* 🕒 Countdown Timer */}
             <div className="text-center text-[2.5rem] sm:text-[3.5rem] md:text-[5rem] font-bold bg-clip-text text-transparent bg-[linear-gradient(to_right,#d4bc6d,#57430d)]">
-                <p className="text-[1.25rem] sm:text-2xl md:text-3xl mb-2">Countdown to 12 Days:</p>
-                <p>
+                <p className="text-[1.25rem] sm:text-2xl md:text-3xl mb-2 font-semibold text-center">
+                    We’re reviewing your profile to see if you qualify to join the <br />
+                    <span className="bg-gradient-to-r from-[#d4bc6d] to-[#57430d] bg-clip-text text-transparent font-extrabold">
+                        Athlete Dashboard
+                    </span>
+                </p>
+            <p>
                     {timeLeft.days}d : {timeLeft.hours}h : {timeLeft.minutes}m : {timeLeft.seconds}s
                 </p>
             </div>
